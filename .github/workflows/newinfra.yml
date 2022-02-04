@@ -10,17 +10,18 @@
 # 1. Create a `main.tf` file in the root of this repository with the `remote` backend and one or more resources defined.
 #   Example `main.tf`:
 #     # The configuration for the `remote` backend.
-#     terraform {
-#       backend "remote" {
+     terraform {
+       backend "remote" {
 #         # The name of your Terraform Cloud organization.
-#         organization = "example-organization"
+        organization = "bhsanshul
+"
 #
 #         # The name of the Terraform Cloud workspace to store Terraform state files in.
-#         workspaces {
-#           name = "example-workspace"
-#         }
-#       }
-#     }
+         workspaces {
+           name = "bhswork"
+         }
+       }
+     }
 #
 #     # An example resource that does nothing.
 #     resource "null_resource" "example" {
@@ -37,10 +38,10 @@
 #
 # 3. Reference the GitHub secret in step using the `hashicorp/setup-terraform` GitHub Action.
 #   Example:
-#     - name: Setup Terraform
-#       uses: hashicorp/setup-terraform@v1
-#       with:
-#         cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
+     - name: Setup Terraform
+       uses: hashicorp/setup-terraform@v1
+       with:
+         cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
 name: 'Terraform'
 
