@@ -44,7 +44,7 @@ resource "azurerm_subnet" "bhssubnet" {
 
   tags = var.tags
 
-
+  }
 resource "azurerm_network_security_group" "bhsnsg" {
   name                = var.nsgname
   location            = var.location
